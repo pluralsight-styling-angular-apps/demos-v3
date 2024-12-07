@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'saa-app',
-  template: `
+    selector: 'saa-app',
+    template: `
       <header>
           <h1>Styling Angular Applications</h1>
           <em>For Modern Angular Applications</em>
@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
           <saa-app-nav></saa-app-nav>
       </div>
   `,
-  styles: [`
+    styles: [`
 
       :host {
           color: #666;
@@ -27,7 +27,8 @@ import { Component } from '@angular/core';
           margin: 0.5em 0 0.25em;
       }
 
-  `]
+  `],
+    standalone: false
 })
 
 export class AppComponent {
