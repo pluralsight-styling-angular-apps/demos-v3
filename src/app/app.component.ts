@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
     selector: 'saa-app',
     templateUrl: './app.component.html',
     // styleUrls: ['./scss/globals.scss', './scss/header.scss', './scss/content.scss', './scss/footer.scss']
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 
 export class AppComponent {
