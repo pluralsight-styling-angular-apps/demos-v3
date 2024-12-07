@@ -4,7 +4,8 @@ import { TabsPaneComponent } from './tabs-pane/tabs-pane.component';
 @Component({
     selector: 'saa-tabs',
     templateUrl: './tabs.component.html',
-    styleUrls: ['./tabs.component.scss']
+    styleUrls: ['./tabs.component.scss'],
+    standalone: false
 })
 
 export class TabsComponent implements AfterContentInit {
