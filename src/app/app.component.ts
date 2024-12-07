@@ -4,7 +4,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
     selector: 'saa-app',
     templateUrl: './app.component.html',
     encapsulation: ViewEncapsulation.None,
-    styleUrls: ['./styles/styles.scss']
+    styleUrls: ['./styles/styles.scss'],
+    standalone: false
 })
 
 export class AppComponent {
