@@ -3,7 +3,8 @@ import { AccordionPaneComponent } from './accordion-pane/accordion-pane.componen
 
 @Component({
     selector: 'saa-accordion',
-    templateUrl: './accordion.component.html'
+    templateUrl: './accordion.component.html',
+    standalone: false
 })
 
 export class AccordionComponent {
