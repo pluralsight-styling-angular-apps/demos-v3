@@ -5,9 +5,10 @@ export interface Pill {
 };
 
 @Component({
-  selector: 'saa-pills',
-  templateUrl: './pills.component.html',
-  styleUrls: ['./pills.component.scss']
+    selector: 'saa-pills',
+    templateUrl: './pills.component.html',
+    styleUrls: ['./pills.component.scss'],
+    standalone: false
 })
 
 export class PillsComponent {
