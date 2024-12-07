@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'saa-navbar-primary',
-  templateUrl: './navbar-primary.component.html'
+    selector: 'saa-navbar-primary',
+    templateUrl: './navbar-primary.component.html',
+    standalone: false
 })
 
 export class NavBarPrimaryComponent { }

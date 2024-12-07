@@ -2,7 +2,8 @@ import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'saa-accordion-pane',
-    templateUrl: './accordion-pane.component.html'
+    templateUrl: './accordion-pane.component.html',
+    standalone: false
 })
 
 export class AccordionPaneComponent {
