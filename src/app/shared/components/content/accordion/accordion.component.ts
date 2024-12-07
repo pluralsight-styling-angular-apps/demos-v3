@@ -4,7 +4,8 @@ import { AccordionPaneComponent } from './accordion-pane/accordion-pane.componen
 @Component({
     selector: 'saa-accordion',
     templateUrl: './accordion.component.html',
-    styleUrls: ['./accordion.component.scss']
+    styleUrls: ['./accordion.component.scss'],
+    standalone: false
 })
 
 export class AccordionComponent {
