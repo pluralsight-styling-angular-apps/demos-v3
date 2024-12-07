@@ -46,7 +46,8 @@ import { Component } from '@angular/core';
             text-decoration: underline;
         }
 
-    `]
+    `],
+    standalone: false
 })
 
 export class AppNavComponent {
