@@ -46,7 +46,8 @@ import { Component } from '@angular/core';
                 </li>
             </ul>
         </div>
-    `
+    `,
+    standalone: false
 })
 
 export class AppNavComponent {
