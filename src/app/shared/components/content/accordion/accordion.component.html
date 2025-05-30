@@ -8,7 +8,7 @@
         class="accordion__label"
         [class.accordion__label--active]="activeIndex === i">
         <span class="accordion__label-text">
-          {{item.title}}
+          {{item.title()}}
         </span>
       </a>
       @if (activeIndex === i) {
