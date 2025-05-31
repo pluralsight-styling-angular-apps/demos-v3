@@ -8,7 +8,7 @@
         class="item__label"
         [class.item__label--active]="activeIndex === i">
         <span class="item__label-text">
-          {{item.title}}
+          {{item.title()}}
         </span>
       </a>
       @if (activeIndex === i) {
