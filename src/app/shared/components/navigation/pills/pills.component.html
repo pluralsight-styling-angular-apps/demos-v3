@@ -1,5 +1,5 @@
 <ul class="items">
-  @for (pill of pills; track pill; let i = $index) {
+  @for (pill of pills(); track pill; let i = $index) {
     <li
       class="item"
       [ngClass]="pill.label || !selectedPill && i === 0 ? 'item--selected' : 'item--unselected'">
