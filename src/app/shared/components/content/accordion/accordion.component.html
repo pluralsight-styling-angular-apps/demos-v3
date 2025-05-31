@@ -8,7 +8,7 @@
         class="item__label"
         [ngClass]="activeIndex === i ? 'item__label--active' : 'item__label--inactive'">
         <span class="item__label-text">
-          {{item.title}}
+          {{item.title()}}
         </span>
       </a>
       @if (activeIndex === i) {
