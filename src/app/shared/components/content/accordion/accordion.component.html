@@ -1,15 +1,17 @@
 <ul>
-    <li 
-        *ngFor="let item of items; let i = index">
-        <a 
-            (click)="selectItem(i)"
-            [class.active]="activeIndex === i">
-            <span>
-                {{item.title}}
-            </span>
-        </a>
-        <ng-container *ngIf="activeIndex === i">
-            <ng-template [ngTemplateOutlet]="item.template"></ng-template>
-        </ng-container>
+  @for (item of items; track item; let i = $index) {
+    <li
+      >
+      <a
+        (click)="selectItem(i)"
+        [class.active]="activeIndex === i">
+        <span>
+          {{item.title}}
+        </span>
+      </a>
+      @if (activeIndex === i) {
+        <ng-template [ngTemplateOutlet]="item.template"></ng-template>
+      }
     </li>
+  }
 </ul>
