@@ -1,13 +1,14 @@
 <ul class="items">
-    <li 
-        *ngFor="let pill of pills, let i = index"
-        class="item"
-        [ngClass]="pill.label || !selectedPill && i === 0 ? 'item--selected' : 'item--unselected'">
-        <a 
-            (click)="togglePill(pill.label)"
-            class="item__link"
-            [ngClass]="selectedPill === pill.label || !selectedPill && i === 0 ? 'item__link--selected' : 'item__link--unselected'">
-            {{pill.label}}
-        </a>
+  @for (pill of pills; track pill; let i = $index) {
+    <li
+      class="item"
+      [ngClass]="pill.label || !selectedPill && i === 0 ? 'item--selected' : 'item--unselected'">
+      <a
+        (click)="togglePill(pill.label)"
+        class="item__link"
+        [ngClass]="selectedPill === pill.label || !selectedPill && i === 0 ? 'item__link--selected' : 'item__link--unselected'">
+        {{pill.label}}
+      </a>
     </li>
+  }
 </ul>
