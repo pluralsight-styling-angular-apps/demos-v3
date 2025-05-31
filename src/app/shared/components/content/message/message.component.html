@@ -7,7 +7,7 @@
   <h2 class="message__title">
     <ng-content select="saa-message-title"></ng-content>
   </h2>
-  @if (messageContent) {
+  @if (messageContent()) {
     <div class="message__content">
       @if (isLayout01) {
         <svg class="message__icon" viewBox="0 0 24 24">
