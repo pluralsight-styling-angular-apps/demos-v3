@@ -2,13 +2,11 @@
   @for (pill of pills(); track pill; let i = $index) {
     <li
       class="pills__item"
-      [ngClass]="{'pills__item--selected': selectedPill === pill.label}">
+      [class.pills__item--selected]="selectedPill === pill.label">
       <a
         (click)="togglePill(pill.label)"
         class="pills__item-link"
-            [ngClass]="{
-                'pills__item-link--selected': selectedPill === pill.label || 
-                !selectedPill && i === 0}">
+        [class.pills__item-link--selected]="selectedPill === pill.label || !selectedPill && i === 0">
         {{pill.label}}
       </a>
     </li>
