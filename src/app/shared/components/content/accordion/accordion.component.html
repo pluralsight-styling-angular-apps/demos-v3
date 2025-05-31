@@ -1,5 +1,5 @@
 <ul class="accordion">
-  @for (item of items; track item; let i = $index) {
+  @for (item of items(); track item; let i = $index) {
     <li
       class="accordion__item"
       [class.accordion__item--active]="activeIndex === i">
@@ -12,7 +12,7 @@
         </span>
       </a>
       @if (activeIndex === i) {
-        <ng-template [ngTemplateOutlet]="item.template"></ng-template>
+        <ng-template [ngTemplateOutlet]="item.template()"></ng-template>
       }
     </li>
   }
