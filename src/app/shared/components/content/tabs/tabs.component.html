@@ -1,5 +1,5 @@
 <ul class="items">
-  @for (tab of tabs; track tab) {
+  @for (tab of tabs(); track tab) {
     <li
       class="item"
       [ngClass]="tab.active() ? 'item--active' : 'item--inactive'">
