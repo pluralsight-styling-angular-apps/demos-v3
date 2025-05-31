@@ -1,4 +1,4 @@
-import { Component, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
+import { Component, contentChildren, effect } from '@angular/core';
 import { TabsPaneComponent } from './tabs-pane/tabs-pane.component';
 
 @Component({
@@ -8,18 +8,20 @@ import { TabsPaneComponent } from './tabs-pane/tabs-pane.component';
     standalone: false
 })
 
-export class TabsComponent implements AfterContentInit {
-    @ContentChildren(TabsPaneComponent) tabs: QueryList<TabsPaneComponent>;
+export class TabsComponent {
+    tabs = contentChildren(TabsPaneComponent);
 
-    ngAfterContentInit(): void {
-        const activeTabs = this.tabs.filter(tab => tab.active());
-        if (activeTabs.length === 0) {
-            this.selectTab(this.tabs.first);
-        }
+    constructor() {
+        effect(() => {
+            const activeTabs = this.tabs().filter(tab => tab.active());
+            if (activeTabs.length === 0) {
+                this.selectTab(this.tabs()[0]);
+            }
+        });
     }
 
     private selectTab(tab: TabsPaneComponent): void {
-        this.tabs.forEach(tab => tab.active = false);
-        tab.active = true;
+        this.tabs().forEach(tab => tab.active.set(false));
+        tab.active.set(true);
     }
 }

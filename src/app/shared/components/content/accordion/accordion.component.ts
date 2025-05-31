@@ -1,4 +1,4 @@
-import { Component, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
+import { Component, contentChildren } from '@angular/core';
 import { AccordionPaneComponent } from './accordion-pane/accordion-pane.component';
 
 @Component({
@@ -9,7 +9,7 @@ import { AccordionPaneComponent } from './accordion-pane/accordion-pane.componen
 })
 
 export class AccordionComponent {
-    @ContentChildren(AccordionPaneComponent) items: QueryList<AccordionPaneComponent>;
+    readonly items = contentChildren(AccordionPaneComponent);
     activeIndex: number;
 
     selectItem(index: number): void {
