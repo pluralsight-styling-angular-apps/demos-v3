@@ -1,4 +1,4 @@
-import { Component, AfterContentInit, contentChildren } from '@angular/core';
+import { Component, contentChildren } from '@angular/core';
 import { AccordionPaneComponent } from './accordion-pane/accordion-pane.component';
 
 @Component({
