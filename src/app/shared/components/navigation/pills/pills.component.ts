@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 export interface Pill {
   label: string;
@@ -12,7 +12,7 @@ export interface Pill {
 })
 
 export class PillsComponent {
-    @Input() pills: Pill[] = [];
+    readonly pills = input<Pill[]>([]);
     selectedPill: Pill;
 
     togglePill(pill: Pill): void {
