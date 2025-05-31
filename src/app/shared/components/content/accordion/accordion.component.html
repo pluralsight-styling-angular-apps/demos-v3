@@ -1,18 +1,19 @@
 <ul class="items">
-    <li 
-        *ngFor="let item of items; let i = index"
-        class="item"
-        [ngClass]="activeIndex === i ? 'item--active' : 'item--inactive'">
-        <a 
-            (click)="selectItem(i)"
-            class="item__label"
-            [ngClass]="activeIndex === i ? 'item__label--active' : 'item__label--inactive'">
-            <span class="item__label-text">
-                {{item.title}}
-            </span>
-        </a>
-        <ng-container *ngIf="activeIndex === i">
-            <ng-template [ngTemplateOutlet]="item.template"></ng-template>
-        </ng-container>
+  @for (item of items; track item; let i = $index) {
+    <li
+      class="item"
+      [ngClass]="activeIndex === i ? 'item--active' : 'item--inactive'">
+      <a
+        (click)="selectItem(i)"
+        class="item__label"
+        [ngClass]="activeIndex === i ? 'item__label--active' : 'item__label--inactive'">
+        <span class="item__label-text">
+          {{item.title}}
+        </span>
+      </a>
+      @if (activeIndex === i) {
+        <ng-template [ngTemplateOutlet]="item.template"></ng-template>
+      }
     </li>
+  }
 </ul>
