@@ -1,4 +1,4 @@
-import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
+import { Component, TemplateRef, input, viewChild } from '@angular/core';
 
 @Component({
     selector: 'saa-accordion-pane',
@@ -8,6 +8,6 @@ import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
 })
 
 export class AccordionPaneComponent {
-    @ViewChild(TemplateRef, { static: true }) template: TemplateRef<unknown>;
-    @Input() title: string;
+    readonly template = viewChild(TemplateRef);
+    readonly title = input<string>(undefined);
 }

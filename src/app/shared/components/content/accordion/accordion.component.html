@@ -1,5 +1,5 @@
 <ul class="items">
-  @for (item of items; track item; let i = $index) {
+  @for (item of items(); track item; let i = $index) {
     <li
       class="item"
       [ngClass]="activeIndex === i ? 'item--active' : 'item--inactive'">
@@ -8,11 +8,11 @@
         class="item__label"
         [ngClass]="activeIndex === i ? 'item__label--active' : 'item__label--inactive'">
         <span class="item__label-text">
-          {{item.title}}
+          {{item.title()}}
         </span>
       </a>
       @if (activeIndex === i) {
-        <ng-template [ngTemplateOutlet]="item.template"></ng-template>
+        <ng-template [ngTemplateOutlet]="item.template()"></ng-template>
       }
     </li>
   }
