@@ -1,13 +1,13 @@
 <ul class="items">
-  @for (tab of tabs; track tab) {
+  @for (tab of tabs(); track tab) {
     <li
       class="item"
-      [class.item--active]="tab.active">
+      [class.item--active]="tab.active()">
       <a
         (click)="selectTab(tab)"
         class="item__link"
-        [class.item__link--active]="tab.active">
-        {{tab.title}}
+        [class.item__link--active]="tab.active()">
+        {{tab.title()}}
       </a>
     </li>
   }

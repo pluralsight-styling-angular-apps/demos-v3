@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 
 @Component({
     selector: 'saa-tabs-pane',
@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 
 export class TabsPaneComponent {
-    @Input() title: string;
-    @Input() active = false;
+    readonly title = input<string>(undefined);
+    readonly active = signal(false);
 }
