@@ -6,7 +6,7 @@
         (click)="selectItem(i)"
         [class.active]="activeIndex === i">
         <span>
-          {{item.title}}
+          {{item.title()}}
         </span>
       </a>
       @if (activeIndex === i) {
