@@ -1,5 +1,5 @@
   
-import { Component, ContentChild, Directive, ElementRef } from '@angular/core';
+import { Component, Directive, ElementRef, contentChild } from '@angular/core';
 
 @Directive({
     selector: 'saa-message-title',
@@ -21,7 +21,7 @@ export class MessageContentDirective {}
 })
 
 export class MessageComponent {
-    @ContentChild(MessageContentDirective) messageContent: MessageContentDirective;
+    readonly messageContent = contentChild(MessageContentDirective);
     isLayout01 = false;
 
     constructor(private hostRef: ElementRef) {}
