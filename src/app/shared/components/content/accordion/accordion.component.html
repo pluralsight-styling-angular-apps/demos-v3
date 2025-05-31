@@ -1,5 +1,5 @@
 <ul>
-  @for (item of items; track item; let i = $index) {
+  @for (item of items(); track item; let i = $index) {
     <li
       >
       <a
@@ -10,7 +10,7 @@
         </span>
       </a>
       @if (activeIndex === i) {
-        <ng-template [ngTemplateOutlet]="item.template"></ng-template>
+        <ng-template [ngTemplateOutlet]="item.template()"></ng-template>
       }
     </li>
   }
