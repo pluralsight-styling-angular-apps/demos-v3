@@ -1,5 +1,5 @@
   
-import { Component, Directive, ElementRef, contentChild } from '@angular/core';
+import { Component, Directive, ElementRef, contentChild, inject } from '@angular/core';
 
 @Directive({
     selector: 'saa-message-title',
@@ -22,11 +22,6 @@ export class MessageContentDirective {}
 
 export class MessageComponent {
     readonly messageContent = contentChild(MessageContentDirective);
-    isLayout01 = false;
-
-    constructor(private hostRef: ElementRef) {}
-
-    ngAfterContentInit(): void {
-        this.isLayout01 = this.hostRef.nativeElement.classList.contains('layout--01');
-    }
+    private hostRef = inject(ElementRef);
+    protected isLayout01 = this.hostRef.nativeElement.classList.contains('layout--01');
 }
