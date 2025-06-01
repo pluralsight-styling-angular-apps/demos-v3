@@ -1,5 +1,5 @@
   
-import { Component, Directive, ElementRef, contentChild } from '@angular/core';
+import { Component, Directive, contentChild } from '@angular/core';
 
 @Directive({
     selector: 'saa-message-title',
