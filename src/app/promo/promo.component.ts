@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, inject } from '@angular/core';
 
 @Component({
     selector: 'saa-promo',
@@ -7,12 +7,7 @@ import { AfterContentInit, Component, ElementRef } from '@angular/core';
     standalone: false
 })
 
-export class PromoComponent implements AfterContentInit {
-    isColor01 = false;
-
-    constructor(private hostRef: ElementRef) {}
-
-    ngAfterContentInit(): void {
-        this.isColor01 = this.hostRef.nativeElement.classList.contains('color--01');
-    }
+export class PromoComponent {
+    private hostRef = inject(ElementRef);
+    protected isColor01 = this.hostRef.nativeElement.classList.contains('color--01');
 }
