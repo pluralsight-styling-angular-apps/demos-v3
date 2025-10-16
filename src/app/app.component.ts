@@ -12,6 +12,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
           <saa-app-nav></saa-app-nav>
       </div>
   `,
+  standalone: false,
   styles: [`
 
       body {

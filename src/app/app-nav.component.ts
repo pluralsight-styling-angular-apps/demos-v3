@@ -20,6 +20,7 @@ import { Component } from '@angular/core';
             </ul>
         </div>
     `,
+    standalone: false,
     styles: [`
 
         div {
