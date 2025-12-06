@@ -9,7 +9,7 @@
     "declaration": false,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
-    "importHelpers": true,
+    "importHelpers": false,
     "target": "ES2022",
     "module": "es2020",
     "lib": [
