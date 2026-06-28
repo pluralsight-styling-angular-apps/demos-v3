@@ -10,7 +10,7 @@ import { AccordionPaneComponent } from './accordion-pane/accordion-pane.componen
 
 export class AccordionComponent {
     readonly items = contentChildren(AccordionPaneComponent);
-    activeIndex: number;
+    activeIndex: number | null = null;
 
     selectItem(index: number): void {
         this.activeIndex = this.activeIndex != index ?  index : null; 
