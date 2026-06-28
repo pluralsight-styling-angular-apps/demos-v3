@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "declaration": false,
     "experimentalDecorators": true,
+    "ignoreDeprecations": "6.0",
     "moduleResolution": "bundler",
     "importHelpers": false,
     "target": "ES2022",
