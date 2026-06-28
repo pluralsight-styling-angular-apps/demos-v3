@@ -13,9 +13,9 @@ export interface Pill {
 
 export class PillsComponent {
     readonly pills = input<Pill[]>([]);
-    selectedPill: Pill;
+    selectedPill: string | null = null;
 
-    togglePill(pill: Pill): void {
+    togglePill(pill: string): void {
         this.selectedPill = pill;
     }
 }
