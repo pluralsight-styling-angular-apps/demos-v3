@@ -9,5 +9,5 @@ import { Component, TemplateRef, input, viewChild } from '@angular/core';
 
 export class AccordionPaneComponent {
     readonly template = viewChild(TemplateRef);
-    readonly title = input<string>(undefined);
+    readonly title = input<string | undefined>(undefined);
 }
