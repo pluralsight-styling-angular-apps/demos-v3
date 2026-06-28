@@ -8,6 +8,6 @@ import { Component, input, signal } from '@angular/core';
 })
 
 export class TabsPaneComponent {
-    readonly title = input<string>(undefined);
+    readonly title = input<string | undefined>(undefined);
     readonly active = signal(false);
 }
