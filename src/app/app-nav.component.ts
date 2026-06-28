@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'saa-app-nav',
@@ -47,7 +47,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
         }
 
     `],
-    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 

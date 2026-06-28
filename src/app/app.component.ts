@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'saa-app',
@@ -29,7 +29,6 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/
       }
 
   `],
-    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 
